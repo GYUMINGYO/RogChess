@@ -21,17 +21,17 @@ public class ChessAI : MonoBehaviour
     
     public GameObject target;
     public Tilemap _chessboardTileMap;
-
-    private void Awake()
-    {
-        Initialized();
-    }
     
     private void Initialized()
     {
         _chessboard = new Dictionary<string, Vector3Int>();
         
         InitChessboard();
+    }
+    
+    private void Awake()
+    {
+        Initialized();
     }
 
     /// <summary>
